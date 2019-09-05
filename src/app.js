@@ -99,5 +99,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('Server Is Up On Port 3000')
+    console.log('Server Isd Up On Port 3000')
 })
