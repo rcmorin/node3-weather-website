@@ -11,9 +11,10 @@ const forecast = (lat, long, callback) => {
             callback ('Location not found.', undefined)
         } else {
             callback (undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degrees out. ' + 
-           'There is a ' + body.currently.precipProbability + ' % chance of rain.')
+           'There is a ' + body.currently.precipProbability + ' % chance of rain. ' + 'The low temp for today is ' +
+            body.daily.data[0].temperatureMin + ' and the high is ' + body.daily.data[0].temperatureMax)
+           console.log(lat + '' + long)
         }
     })
 }
-
 module.exports = forecast
